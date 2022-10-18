@@ -10,3 +10,8 @@ code reuse -
 {% block content %}
 {% endblock %}
 {% extends 'pagename.html' %}
+
+{% block content %}
+{% endblock %}
+get value from html - request.POST['name']
+CSRF Protection - {% csrf_token %}
