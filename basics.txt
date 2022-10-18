@@ -15,3 +15,22 @@ code reuse -
 {% endblock %}
 get value from html - request.POST['name']
 CSRF Protection - {% csrf_token %}
+
+static files -
+STATICFILES_DIRS = [
+os.path.join(BASE_DIR,'foldername where files are available') ]
+STATIC_ROOT = os.path.join(BASE_DIR,'newfolder to create')
+static files command - python manage.py collectstatic
+include static to index page -
+{% load static %}
+href="{% static 'path' %}"
+pass value to page - return render(request, 'index.html', {'name as pass': name of variable})
+import something from same folder - from .modelname import class or model
+for loop in html page -
+{% for variable in list %}
+...content...
+{% endfor %}
+if statement in html page -
+{% if condition %}
+...content...
+{% endif %}
