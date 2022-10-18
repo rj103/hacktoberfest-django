@@ -1,0 +1,12 @@
+django_basics
+
+create project - django-admin startproject projectname
+create app - django-admin startapp appname
+start server - python manage.py runserver
+url mapping - urlpatterns = [ path('',include('appname.urls')), path('',views.functionname,name='functionname') ]
+set templates address - 'DIRS': [os.path.join(BASE_DIR,'templates')]
+show page - return render(request,'pagename.html')
+code reuse -
+{% block content %}
+{% endblock %}
+{% extends 'pagename.html' %}
