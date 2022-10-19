@@ -61,3 +61,19 @@ make migration file -
 python manage.py makemigrations
 migration connection to database -
 python manage.py sqlmigrate travello 0001
+
+migrate -
+python manage.py migrate
+create super user -
+python manage.py createsuperuser
+create admin page -
+from django.contrib import admin
+from .models import Destination
+admin.site.register(Destination)
+change settings to insert media -
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+change urls to insert media -
+from django.conf import settings
+from django.conf.urls.static import static
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
